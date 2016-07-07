@@ -44,7 +44,7 @@ public class KlantController extends HttpServlet{
             forward = LIJST_KLANTEN;
             
             //tussenstap
-            int userId = Integer.parseInt(request.getParameter("userId"));
+            int userId = Integer.parseInt(request.getParameter("klantId"));
             service.delete(userId);
             
             //wat stuur je mee
@@ -55,7 +55,7 @@ public class KlantController extends HttpServlet{
             forward = INSERT_OR_EDIT;
             
             //tussen stap
-            int userId = Integer.parseInt(request.getParameter("userId"));
+            int userId = Integer.parseInt(request.getParameter("klantId"));
             Klant klant = service.findById(userId);
             
             //wat stuur je mee

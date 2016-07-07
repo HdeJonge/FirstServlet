@@ -49,8 +49,8 @@
                     <td><c:out value="${klant.tussenvoegsel}" /></td>
                     
                     <td><c:out value="${klant.email}" /></td>
-                    <td><a href="KlantController?action=edit&userId=<c:out value="${klant.klantId}"/>">Update</a></td>
-                    <td><a href="KlantController?action=delete&userId=<c:out value="${klant.klantId}"/>">Delete</a></td>
+                    <td><a href="KlantController?action=edit&klantId=<c:out value="${klant.klantId}"/>">Update</a></td>
+                    <td><a href="KlantController?action=delete&klantId=<c:out value="${klant.klantId}"/>">Delete</a></td>
                 </tr>
             </c:forEach>
         </tbody>

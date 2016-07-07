@@ -62,6 +62,7 @@
         <input type="submit" value="Submit" class="btn btn-default"/>
         
         <a class="btn btn-default" href="BestellingController?action=lijstBestellingen&klantId=<c:out value="${klant.klantId}"/>" role="button">Bestellingen</a>
+        <a class="btn btn-default" href="KlantController?action=lijstKlanten&" role="button">Klanten lijst</a>
         <a href="KlantController?action=delete&Id=<c:out value="${bestelling.bestellingID}"/>">Bestelling2</a>
                
     </div>

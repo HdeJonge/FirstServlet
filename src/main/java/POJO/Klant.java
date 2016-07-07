@@ -43,7 +43,7 @@ public class Klant implements Serializable {
     private Set<Account> accountSet = new HashSet();
     */
     
-    @OneToMany(mappedBy="klant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="klant", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Bestelling> bestellingSet = new HashSet();
     
     

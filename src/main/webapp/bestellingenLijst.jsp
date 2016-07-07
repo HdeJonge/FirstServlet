@@ -51,6 +51,7 @@
         
     </table>
         <a class="btn btn-default" role="button" href="BestellingController?action=insert&klantId=<c:out value="${klantId}"/>">Add Bestelling</a>
+        <a class="btn btn-default" role="button" href="KlantController?action=edit&klantId=<c:out value="${klantId}"/>">Klant</a>
   </div>
 
 </body>
