@@ -13,14 +13,14 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "BestellingArtikel")
+@Table(name = "BestelRegel")
 public class BestellingArtikel implements Serializable{
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bestellingArtikel_Id")
-    private int ID;
+    @Column(name = "bestelRegel_id")
+    private int bestellingArtikelID;
     
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="artikel_id")
     private Artikel artikel;
     
@@ -32,11 +32,11 @@ public class BestellingArtikel implements Serializable{
     private int aantal;
     
     public int getID() {
-        return ID;
+        return bestellingArtikelID;
     }
 
     public void setID(int ID) {
-        this.ID = ID;
+        this.bestellingArtikelID = ID;
     }
 
     public Artikel getArtikel() {

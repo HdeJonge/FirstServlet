@@ -7,10 +7,10 @@
 			 com.mysql.jdbc.Driver
 		 </property>
 		 <property name="hibernate.connection.url">
-			 jdbc:mysql://localhost/workshopdb
+			 jdbc:mysql://localhost/workshop1
 		 </property>
 		 <property name="hibernate.connection.username">
-			 rsvier
+			 scott
 		</property>
 		 <property name="hibernate.connection.password">
 		 tiger

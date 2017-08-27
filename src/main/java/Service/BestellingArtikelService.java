@@ -33,13 +33,15 @@ public class BestellingArtikelService {
     public BestellingArtikel findById(int bestellingArtikelId){
         BestellingArtikel bestellingArtikel = DAO.findById(bestellingArtikelId);
         return bestellingArtikel;
-        
     }
-    
     //read by id koppel
     public ArrayList<BestellingArtikel> findByBestellingId(int bestellingId){
         ArrayList<BestellingArtikel> BestellingArtikelList = DAO.findByBestellingId(bestellingId);
         return BestellingArtikelList;
+    }
+    public BestellingArtikel findByArtikelId(int bestellingId){
+        BestellingArtikel BestellingArtikel = DAO.findByArtikelId(bestellingId);
+        return BestellingArtikel;
     }
     
     //update koppel

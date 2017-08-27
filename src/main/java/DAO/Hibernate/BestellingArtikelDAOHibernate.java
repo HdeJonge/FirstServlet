@@ -28,11 +28,19 @@ public class BestellingArtikelDAOHibernate extends GenericDAO<BestellingArtikel,
         super(BestellingArtikel.class);
     }
     public ArrayList<BestellingArtikel> findByBestellingId(int bestellingId){
-         openCurrentSessionWithTransaction();
+        openCurrentSessionWithTransaction();
         Query query = getCurrentSession().createQuery("from BestellingArtikel where bestelling_Id = :bestellingId");
         query.setParameter("bestellingId", bestellingId);
         ArrayList<BestellingArtikel> bestellingArtikelLijst = (ArrayList<BestellingArtikel>) query.list();
         closeCurrentSessionWithTransaction();
         return bestellingArtikelLijst;
+    }
+    public BestellingArtikel findByArtikelId(int artikelId){
+        openCurrentSessionWithTransaction();
+        Query query = getCurrentSession().createQuery("from BestellingArtikel where artikel_Id = :artikelId");
+        query.setParameter("artikelId", artikelId);
+        BestellingArtikel bestellingArtikel = (BestellingArtikel) query.list();
+        closeCurrentSessionWithTransaction();
+        return bestellingArtikel;
     }
 }

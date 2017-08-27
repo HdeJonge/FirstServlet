@@ -22,7 +22,7 @@ public class Bestelling implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bestelling_id")
     private int bestellingID;
-    @Column(name = "totaal_prijs")
+    @Column(name = "totaalprijs")
     private BigDecimal totaalPrijs;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "bestelling")

@@ -14,4 +14,5 @@ import java.util.ArrayList;
  */
 public interface IBestellingArtikelDAO extends IGenericDAO<BestellingArtikel,Integer>{
         public ArrayList<BestellingArtikel> findByBestellingId(int bestellingId);
+        public BestellingArtikel findByArtikelId(int artikelId);
 }

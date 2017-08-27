@@ -20,26 +20,26 @@ import javax.persistence.Table;
 public class Artikel {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "artikel_id")
-    private int artikelId;
-    @Column(name = "artikel_naam")
+    private int artikelID;
+    @Column(name = "naam")
     private String artikelNaam;
-    @Column(name = "artikel_voorraad")
+    @Column(name = "voorraad")
     private int artikelVoorraad;
-    @Column(name = "artikel_prijs")
+    @Column(name = "prijs")
     private BigDecimal artikelPrijs;
     
    public Artikel(){
     }
    
     public void setArtikelID(int artikelId){
-        this.artikelId = artikelId;
+        this.artikelID = artikelId;
     }
    
     /**
      * @return the artikel_ID
      */
-    public int getArtikelId() {
-        return artikelId;
+    public int getArtikelID() {
+        return artikelID;
     }
 
     /**

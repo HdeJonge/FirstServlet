@@ -70,14 +70,14 @@ public class ArtikelView {
                 "Artikel ID", "Artikelnaam", "Artikelprijs", "Artikelvoorraad");
         
         for(Artikel a : artikelLijst){
-            System.out.format("%12d\t\t| %30s\t\t| %14.2f\t\t| %17d\t\t|\n", a.getArtikelId(), a.getArtikelNaam(), 
+            System.out.format("%12d\t\t| %30s\t\t| %14.2f\t\t| %17d\t\t|\n", a.getArtikelID(), a.getArtikelNaam(), 
             a.getArtikelPrijs(), a.getArtikelVoorraad()); 
         }
     }
     
     public void print(Artikel artikel){
-        PrintFormat.printHeader("Artikel met artikel ID " + artikel.getArtikelId());
-        System.out.println("Artikel ID: " + artikel.getArtikelId());
+        PrintFormat.printHeader("Artikel met artikel ID " + artikel.getArtikelID());
+        System.out.println("Artikel ID: " + artikel.getArtikelID());
         System.out.println("Artikelnaam: " + artikel.getArtikelNaam());
         System.out.println("Artikelprijs: " + artikel.getArtikelPrijs());
         System.out.println("Artikelvoorraad: " + artikel.getArtikelVoorraad());

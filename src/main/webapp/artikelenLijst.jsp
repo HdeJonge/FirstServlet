@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bestellingen</title>
+    <title>Atikelen</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,34 +25,26 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <div class="container">
-        <h1>Bestellingen</h1>
+        <h1>Artikelen</h1>
     <table class="table table-striped">
         <input class="form-control"
                 type="text" readonly="readonly" name="klantId"
                 value="<c:out value="${klantId}" />" />
-        
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>TotaalPrijs</th>
-                <th colspan=2>Action</th>
-            </tr>
-        </thead>
+        <input class="form-control"
+                type="text" readonly="readonly" name="bestellingId"
+                value="<c:out value="${bestellingId}" />" />
         <tbody>
-            <c:forEach items="${bestellingen}" var="bestelling">
+            <c:forEach items="${artikelLijst}" var="artikel">
                 <tr>
-                    <td><c:out value="${bestelling.bestellingID}" /></td>
-                    <td><c:out value="${bestelling.totaalPrijs}" /></td>
-                    <td><a href="BestellingController?action=open&klantId=<c:out value="${klantId}"/>&bestellingId=<c:out value="${bestelling.bestellingID}"/>">Open</a></td>
-                    <td><a href="BestellingController?action=edit&klantId=<c:out value="${klantId}"/>&bestellingId=<c:out value="${bestelling.bestellingID}"/>">Update</a></td>
-                    <td><a href="BestellingController?action=delete&klantId=<c:out value="${klantId}"/>&bestellingId=<c:out value="${bestelling.bestellingID}"/>">Delete</a></td></tr>
+                    <td><c:out value="${artikel.artikelNaam}" /></td>
+                    <td><c:out value="${artikel.artikelPrijs}" /></td>
+                    <td><a href="BestellingController?action=add&klantId=<c:out value="${klantId}"/>&bestellingId=<c:out value="${bestellingId}"/>&artikelId=<c:out value="${artikel.artikelID}"/>">kies</a>
+                    </td>
             </c:forEach>
         </tbody>
         
     </table>
-        <a class="btn btn-default" role="button" href="BestellingController?action=insert&klantId=<c:out value="${klantId}"/>">nieuwe bestelling toevoegen</a>
-        <a class="btn btn-default" role="button" href="KlantController?action=edit&klantId=<c:out value="${klantId}"/>">terug naar klant</a>
-  </div>
+</div>
 
 </body>
 </html>
